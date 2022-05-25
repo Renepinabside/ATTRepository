@@ -1,4 +1,14 @@
 # Starter pipeline
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Subscription'
+    subscriptionId: '30f8fc49-5e1c-4034-acc5-709c7300e987'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/Renepinabside/ATTRepository/main/databriks.json'
+    deploymentMode: 'Incremental'
+    deploymentName: 'TestDatabricks'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
